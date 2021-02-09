@@ -64,4 +64,7 @@ smtp_tls_security_level = encrypt
 smtp_tls_note_starttls_offer = yes
 {% endif %}
 {% endif %}
+{% if postfix_smtpd_relay_restrictions %}
+smtpd_relay_restrictions = {{ postfix_smtpd_relay_restrictions | join(' ') }}
+{% endif %}
 {% endif %}

@@ -17,28 +17,28 @@ None
 
 ## Role Variables
 
-| Variable                  			| Default     						| Comments (type)                                   |
-| :---              		        	| :---        						| :---                                              |
-| ```postfix_inet_interfaces```			| ```all``` 						|													| 
-| ```postfix_inet_protocols	```			| ```all``` 						|													| 
-| ```postfix_hostname```          		| ```"{{ ansible_fqdn }}"``` 		|													|       
-| ```postfix_mailname```          		| ```$myhostname``` 				|													| 
-| ```postfix_mynetworks``` 				| ```- 127.0.0.0/8 ```				|													|
-|	  	       				   			| ```- '[::ffff:127.0.0.0]/104'``` 	|													|
-|								    	| ```- '[::1]/128'``` 				|													|
-| ```postfix_mydestination ```			| ```- "{{ postfix_hostname }}"```  |													|
-|								    	| ```- $myhostname``` 				|													|
-|							   		    | ```- localhost.$mydomain``` 		|													|
-|							   		    | ```- localhost``` 				|													|
-| ```postfix_relayhost```				|									|													|
-| ```postfix_relayhost_port``` 			|									|													|
-| ```postfix_relaytls```				| ```true```						|													|
-| ```postfix_sasl_auth_enable```		| ```true```						|													|
-| ```postfix_sasl_user``` 				|									|													|
-| ```postfix_sasl_password``` 			|									|													|
-| ```postfix_sasl_security_options``` 	| ```noanonymous```					|													|
-| ```postfix_root_mailbox``` 			| 									|													|
-
+| Variable                  				| Default     						| Comments (type)                                   |
+| :---              		        		| :---        						| :---                                              |
+| ```postfix_inet_interfaces```				| ```all``` 						|													|
+| ```postfix_inet_protocols	```				| ```all``` 						|													|
+| ```postfix_hostname```          			| ```"{{ ansible_fqdn }}"``` 		|													|
+| ```postfix_mailname```          			| ```$myhostname``` 				|													|
+| ```postfix_mynetworks``` 					| ```- 127.0.0.0/8 ```				|													|
+|	  	       				   				| ```- '[::ffff:127.0.0.0]/104'``` 	|													|
+|								    		| ```- '[::1]/128'``` 				|													|
+| ```postfix_mydestination ```				| ```- "{{ postfix_hostname }}"```  |													|
+|								    		| ```- $myhostname``` 				|													|
+|							   		   		| ```- localhost.$mydomain``` 		|													|
+|							   		   	 	| ```- localhost``` 				|													|
+| ```postfix_relayhost```					|									|													|
+| ```postfix_relayhost_port``` 				|									|													|
+| ```postfix_relaytls```					| ```true```						|													|
+| ```postfix_sasl_auth_enable```			| ```true```						|													|
+| ```postfix_sasl_user``` 					|									|													|
+| ```postfix_sasl_password``` 				|									|													|
+| ```postfix_sasl_security_options``` 		| ```noanonymous```					|													|
+| ```postfix_root_mailbox``` 				| 									|													|
+| ```postfix_smtpd_relay_restrictions``` 	| 									|													|
 
 ## Dependencies
 
@@ -74,7 +74,7 @@ None
 ## Author
 
 * [Simon Bärlocher](https://sbaerlocher.ch)
- 
+
 ## License
 
 This project is under the MIT License. See the [LICENSE](https://sbaerlo.ch/licence) file for the full license text.
